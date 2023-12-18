@@ -1,4 +1,4 @@
-import { tagName, Element } from './buttonList/index.js'
+import { tagName, Element } from './elements/buttonList/index.js'
 
 const prefix = 'wil'
 
