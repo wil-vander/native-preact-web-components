@@ -1,23 +1,20 @@
 import { render } from 'preact'
 import { html } from 'htm/preact'
-import CSS from './CSS.js'
+import Style from './Style.js'
 import Container from './Container.js'
 
-class Element extends HTMLElement {
+export const tagName = 'button-list'
+
+export class Element extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: 'closed' })
 
     render(
       html`
-        <${CSS} />
+        <${Style} />
         <${Container} />
       `,
       shadowRoot
     )
   }
-}
-
-export default {
-  tagName: 'quotes',
-  Element,
 }

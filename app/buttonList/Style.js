@@ -1,6 +1,6 @@
 import { html } from 'htm/preact'
 
-const CSS = () => html`<style>
+const Style = () => html`<style>
   :host {
     font-size: 16px;
     font-family: sans-serif;
@@ -27,4 +27,4 @@ const CSS = () => html`<style>
   }
 </style>`
 
-export default CSS
+export default Style

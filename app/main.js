@@ -1,9 +1,9 @@
-import quotes from './quotes/element.js'
+import { tagName, Element } from './buttonList/index.js'
 
 const prefix = 'wil'
 
-customElements.define(`${prefix}-${quotes.tagName}`, quotes.Element)
+customElements.define(`${prefix}-${tagName}`, Element)
 
-document.addEventListener('quote:click', (event) => {
-  console.log('quote:click', event.detail)
+document.addEventListener('button:click', (event) => {
+  console.log('button:click', event.detail)
 })
