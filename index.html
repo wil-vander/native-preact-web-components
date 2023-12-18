@@ -13,8 +13,37 @@
       }
     </script>
     <script type="module" src="./app/main.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const buttonList = document.querySelector('wil-button-list')
+        const button = document.getElementById('my-button')
+
+        button.addEventListener('click', () => {
+          console.log('button clicked')
+        })
+
+        buttonList.addEventListener('button:click', (event) => {
+          event.stopImmediatePropagation()
+          console.log('element clicked', { event })
+        })
+
+        // Comment out `event.stopImmediatePropagation()` to trigger this event.
+        document.addEventListener('button:click', (event) => {
+          console.log('document clicked', { event })
+        })
+      })
+    </script>
   </head>
   <body>
     <wil-button-list></wil-button-list>
+
+    <hr />
+
+    <wil-button id="my-button">
+      <div>
+        <span>test</span>
+        <div>iets</div>
+      </div>
+    </wil-button>
   </body>
 </html>

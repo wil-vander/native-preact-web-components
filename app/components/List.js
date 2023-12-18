@@ -6,7 +6,7 @@ const List = ({ buttons, onClick }) => html`
     ${buttons.map(
       (button) => html`
         <li>
-          <${Button} onClick=${() => onClick(button)}>${button}<//>
+          <${Button} onClick=${(event) => onClick(event, button)}>${button}<//>
         </li>
       `
     )}

@@ -9,12 +9,18 @@ const useButtonList = () => {
     console.log('useButtonList initialized')
   }, [])
 
-  const onClick = (button) => {
-    setButtons([...buttons, `${button} - copy`])
+  const onClick = (event, button) => {
+    const rootNode = event.target.getRootNode()
 
-    // Trigger an event that can be picked up by the surrounding page.
-    const event = new CustomEvent('button:click', { detail: button })
-    document.dispatchEvent(event)
+    const customEvent = new CustomEvent('button:click', {
+      bubbles: true,
+      composed: true,
+      detail: button,
+    })
+
+    rootNode.dispatchEvent(customEvent)
+
+    setButtons([...buttons, `${button} - copy`])
   }
 
   return {

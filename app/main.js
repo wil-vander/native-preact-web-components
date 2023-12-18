@@ -1,9 +1,7 @@
-import { tagName, Element } from './elements/buttonList/index.js'
+import * as buttonList from './elements/buttonList/index.js'
+import * as button from './elements/button/index.js'
 
 const prefix = 'wil'
 
-customElements.define(`${prefix}-${tagName}`, Element)
-
-document.addEventListener('button:click', (event) => {
-  console.log('button:click', event.detail)
-})
+customElements.define(`${prefix}-${buttonList.tagName}`, buttonList.Element)
+customElements.define(`${prefix}-${button.tagName}`, button.Element)
