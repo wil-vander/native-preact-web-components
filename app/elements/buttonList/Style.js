@@ -4,8 +4,6 @@ const Style = () => html`<style>
   :host {
     font-size: 16px;
     font-family: sans-serif;
-    display: grid;
-    gap: 0.5rem;
   }
 
   ul,
@@ -24,6 +22,11 @@ const Style = () => html`<style>
     border-radius: 0.25rem;
     background-color: #eee;
     cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 </style>`
 
