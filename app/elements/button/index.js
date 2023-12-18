@@ -25,8 +25,6 @@ export class Element extends HTMLElement {
       shadowRoot
     )
 
-    this.transferChildren(shadowRoot)
-
     // Transfer children to the button element.
     const element = shadowRoot.querySelector('button')
     element.appendChild(...this.children)
