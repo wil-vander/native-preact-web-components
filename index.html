@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script type="module" src="./main.js"></script>
-  <style>
-    input {
-      background-color: blue;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Search</h1>
-  <wil-search id="search-input"></search-input>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="importmap">
+      {
+        "imports": {
+          "preact": "https://esm.sh/preact@10.19.2",
+          "preact/": "https://esm.sh/preact@10.19.2/",
+          "htm/preact": "https://esm.sh/htm@3.1.1/preact?external=preact"
+        }
+      }
+    </script>
+    <script type="module" src="./app/main.js"></script>
+  </head>
+  <body>
+    <wil-quotes></wil-quotes>
+  </body>
 </html>
