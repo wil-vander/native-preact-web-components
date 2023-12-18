@@ -10,7 +10,11 @@ export class Element extends HTMLElement {
     event.stopImmediatePropagation()
 
     this.dispatchEvent(
-      new CustomEvent('click', { bubbles: true, composed: true })
+      new CustomEvent('click', {
+        bubbles: true,
+        composed: true,
+        detail: children,
+      })
     )
   }
 
