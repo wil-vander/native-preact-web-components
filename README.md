@@ -1,3 +1,3 @@
-# POC Native Preact Webcomponents
+# POC Vanilla Preact Webcomponents
 
-This is a POC of native Preact web components using HTML instead of JSX.
+This is a POC of vanilla JS Preact web components using HTM.
